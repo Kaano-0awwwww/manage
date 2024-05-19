@@ -4,7 +4,7 @@ import { ref, watch } from 'vue'
 import { useRegisterService, useLoginService } from '@/api/function'
 import { useUserStore } from '@/stores/config'
 import { useRouter } from 'vue-router'
-import { ElMessage } from 'element-plus'
+
 const router = useRouter()
 
 const isRegister = ref(false)
