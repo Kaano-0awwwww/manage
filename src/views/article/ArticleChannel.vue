@@ -1,7 +1,7 @@
 <script setup>
 import channelEdit from './components/channelEdit.vue'
 import { getArtChannelService, delChannelService } from '@/api/function'
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 import { Delete, Edit } from '@element-plus/icons-vue'
 import { ElMessage } from 'element-plus'
 
@@ -16,7 +16,8 @@ const getChannelList = async () => {
   channelList.value = res.data.data
   loading.value = false
 }
-getChannelList()
+
+onMounted(() => getChannelList())
 
 const onAddChannel = () => {
   dialog.value.open({})
